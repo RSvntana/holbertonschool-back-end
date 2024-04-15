@@ -18,8 +18,7 @@ def display_todo_progress(employee_id):
     employee_name = get_employee_name(employee_id)
     total_tasks = len(todos)
     done_tasks = sum(1 for task in todos if task.get("completed"))
-    print(f"Employee {employee_name} is  done with tasks({done_tasks}/"
-      f"{total_tasks}): ")
+    print(f"Employee {employee_name} is done with tasks({done_tasks}/{total_tasks}):")
     for task in todos:
         if task.get("completed"):
             print(f"\t {task.get('title')}")
