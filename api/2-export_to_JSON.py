@@ -31,14 +31,14 @@ def export_todo_progress(employee_id):
         task_dict = {
             "task": task.get("title"),
             "completed": task.get("completed"),
-            "username": employee_name
+            "username": employee_name,
         }
         todo_data.append(task_dict)
 
     filename = f"{employee_id}.json"
     todo_json = {str(employee_id): todo_data}
 
-    with open(filename, mode='w') as jsonfile:
+    with open(filename, mode="w") as jsonfile:
         json.dump(todo_json, jsonfile)
 
 
